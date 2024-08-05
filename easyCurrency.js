@@ -11,8 +11,6 @@ document.registro.addEventListener("submit", (event) => {
             "pass": password,
         }
 
-    // users.unshift(users);
-    // localStorage.setItem(`accessKey`, users);
     console.log(user)
 
 });
