@@ -1,16 +1,22 @@
+registro.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-document.registro.addEventListener("submit", (event) => {
-    event.preventDefault()
-    const username = document.querySelector(`#username`).value;
-    const email = document.querySelector(`#email`).value;
-    const password = document.querySelector(`#password`).value;
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
-    let user = {
-            "login": username,
-            "email": email,
-            "pass": password,
-        }
+  if (username === '' || email === '' || password === '') {
+    alert('Todos os campos precisam estar preenchidos!');
+    return;
+  }
 
-    console.log(user)
+  if (password.length < 8) {
+    alert('A senha precisa ter pelo menos 8 caracteres!');
+    return;
+  }
 
-});
+  let userValid = {
+    nome: ``, email: ``, senha: ``,
+  }
+
+})

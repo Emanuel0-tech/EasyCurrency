@@ -1,16 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Playwrite AR", cursive;
     background-color: beige;
 }
 
 h1 {
+    font-size: 50px;
     color: black;
 }
 
 p {
     color: black;
+}
+
+img {
+    width: 300px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    
+}
+
+.container {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.child {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+form {
+    width: 600px;
 }
 
 input {
@@ -41,7 +72,8 @@ input {
 
 }
 
-.container {
-    text-align: center;
-    margin-top: 10%;
+@media(max-width:1000px) {
+    #img3, #img2 {
+        display: none;
+    }
 }
