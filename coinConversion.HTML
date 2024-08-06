@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coin conversion</title>
+    <link rel="stylesheet" href="coinConversion.css">
+
 </head>
 
 <body>
@@ -13,9 +15,11 @@
             <h1 class="app-title">Moeda Fácil</h1>
         </div>
         <label for="amount">Amount: </label>
-        <input type="number" id="amount">
+        <input required type="number" id="amount" placeholder="00,00">
         <div class="dropDowns">
+            <label id="title-from">Converter de: </label>
             <select id="from-currency-select"></select>
+            <label id="title-to">Para: </label>
             <select id="to-currency-select"></select>
         </div>
         <button id="convert-button">Converter</button>
