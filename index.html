@@ -5,36 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moeda Fácil</title>
-    <link rel="stylesheet" href="easyCurrency.css">
+    <!-- <link rel="stylesheet" href="easyCurrency.css"> -->
 </head>
 
 <body>
-    <main class="main-forms">
-        <div class="container">
-            <div class="child">
-                <form name="registro"> 
-                    <h1 class="easyCurrency">Moeda Fácil</h1>
-                    
-                    <p>Digite seu nome de usuário: </p>
-                    <input type="text" id="username" placeholder="Nome" style="text-align: center" />
-                    
-                    <p>Digite seu E-mail: </p>
-                    <input type="email" id="email" placeholder="E-mail" style="text-align: center" />
-                    
-                    <p>Digite sua senha: </p>
-                    <input type="text" id="password" placeholder="Senha" style="text-align: center" />
-                    
-                    <div class="buttons">
-                        <button class="button-register">Cadastrar</button>
-                    </div>
-                </form>
-            </div>
-            <h1>"TUDO VALE À PENA SE A ALMA NÃO É PEQUENA"</h1>
+    <div id="container">
+        <h1>Cadastrar</h1>
+
+        <div id="label-float">
+            <input type="text" id="nome" required>
+            <label id="labelNome" for="nome">Nome</label>
+        </div>
+
+        <div id="label-float">
+            <input type="text" id="usuario" required>
+            <label id="labelUsuario" for="usuario">Usuario</label>
+        </div>
+        
+        <div id="label-float">
+            <input type="password" id="senha" required>
+            <label id="labelSenha" for="senha">Senha</label>
+        </div>
+
+        <div class="label-float">
+            <input type="password" id="comfirmarSenha" required>
+            <label id="labelComfirmarSenha" for="comfirmarSenha">Confimar Senha</label>
+        </div>
+
+        <div class="btn-cadastro">
+            <button>Cadastrar</button>
+        </div>
+    </div>
+            <!-- <h1>"TUDO VALE À PENA SE A ALMA NÃO É PEQUENA"</h1>
             <h2>(FERNANDO PESSOA)</h2>
             <img src="https://cdn-icons-png.flaticon.com/512/5531/5531983.png" alt="">
             <img src="https://cdn-icons-png.flaticon.com/512/7238/7238552.png" alt="">
-            <img src="https://cdn-icons-png.flaticon.com/512/12866/12866081.png" alt="">
-    </main>
+            <img src="https://cdn-icons-png.flaticon.com/512/12866/12866081.png" alt=""> -->
     <script src="easyCurrency.js"></script>
 </body>
 

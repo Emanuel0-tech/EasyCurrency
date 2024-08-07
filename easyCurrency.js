@@ -1,81 +1,76 @@
-<<<<<<< HEAD
-registro.addEventListener('submit', (event) => {
-  event.preventDefault();
+let nome = document.querySelector(`#nome`);
+let labelNome = document.querySelector(`#labelNome`);
 
-  const username = document.getElementById('username').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+let usuario = document.querySelector(`#usuario`);
+let labelUsuario = document.querySelector(`#labelUsuario`);
 
-  if (username === '' || email === '' || password === '') {
-    alert('Todos os campos precisam estar preenchidos!');
-    return;
-  }
+let senha = document.querySelector(`#senha`);
+let labelSenha = document.querySelector(`#labelSenha`);
 
-  if (password.length < 8) {
-    alert('A senha precisa ter pelo menos 8 caracteres!');
-    return;
-  }
+let confirmarSenha = document.querySelector(`#confirmarSenha`);
+let labelConfirmarSenha = document.querySelector(`#labelConfirmarSenha`);
 
-  let userValid = {
-    nome: ``, email: ``, senha: ``,
-  }
-
-})
-=======
-const loginForm = document.getElementById('loginForm');
-const usuarios = [ 
-  { username: 'usuario1', email: 'usuario1@email.com', password: 'senha1' },
-];
-
-function validarEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
-
-function validarSenha(senha) {
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    return regex.test(senha);
-}
-
-function verificarCredenciais(username, password) {
-  return usuarios.some(user => user.username === username && user.password === password);
-}
-
-function armazenarUsuario(usuario) {
-  localStorage.setItem('usuarioLogado', JSON.stringify(usuario));
-}
-
-loginForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const username = document.getElementById('username').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-
-  
-  if (!username || !email || !password) {
-    alert('Por favor, preencha todos os campos.');
-    return;
-  }
-
-  if (!validarEmail(email)) {
-    alert('Email inválido.');
-    return;
-  }
-
-  if (!validarSenha(password)) {
-    alert('Senha fraca. Deve conter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas e números.');
-    return;
-  }
-
-  
-  const usuarioEncontrado = usuarios.find(user => user.username === username && user.password === password);
-  if (usuarioEncontrado) {
-  
-    armazenarUsuario(usuarioEncontrado);
-    window.location.href = 'pagina_após_login.html';
-  } else {
-    alert('Usuário ou senha inválidos.');
-  }
+nome.addEventListener('keyup', () => {
+    if (nome.value.length >= 3) {
+        labelNome.style.color = 'green';
+        labelNome.innerText = 'Nome';
+        nome.style.color = `green`;
+    } else {
+        labelNome.style.color ='red';
+        labelNome.innerText = 'Insira no mínimo 5 caracteres';
+        nome.style.color = `red`;
+    }
 });
->>>>>>> dd9485215e3f03305bf0f18730268e80824a3d91
+
+usuario.addEventListener('keyup', () => {
+    if (usuario.value.length >= 2) {
+        labelUsuario.style.color = 'green';
+        labelUsuario.innerText = 'Usuario';
+        usuario.style.color = `green`;
+    } else {
+        labelUsuario.style.color ='red';
+        labelUsuario.innerText = 'Insira no mimímo 3 caracteres';
+        usuario.style.color = `red`;
+    }
+});
+
+senha.addEventListener('keyup', () => {
+    if (senha.value.length >= 8) {
+        labelSenha.style.color = 'green';
+        labelSenha.innerText = 'Senha';
+        senha.style.color = `green`;
+    } else {
+        labelSenha.style.color ='red';
+        labelSenha.innerText = 'Insira no mínimo 8 caracteres';
+        senha.style.color = `red`;
+    }
+});
+
+function confirmarSenha () {
+if (senha.value == confirmarSenha.value) {
+    labelConfirmarSenha.style.color = 'green';
+    labelConfirmarSenha.innerText = 'Confirmar Senha';
+    confirmarSenha.color = `green`;
+} else {
+    labelConfirmarSenha.style.color ='red';
+    labelConfirmarSenha.innerText = 'As senhas não coincidem';
+    confirmarSenha.color = `red`;
+    
+}};
+
+
+
+
+// confirmarSenha.addEventListener('keyup', ()=>{
+//     if (senha.value == confirmarSenha.value) {
+//         // labelConfirmarSenha.style.color = 'green';
+//         // labelConfirmarSenha.innerText = 'Confirmar Senha';
+//         // confirmarSenha.color = `green`;
+//         alert("Igual")
+//     } else {
+//         // labelConfirmarSenha.style.color ='red';
+//         // labelConfirmarSenha.innerText = 'As senhas não coincidem';
+//         // confirmarSenha.color = `red`;
+//         alert("Diferente")
+//     }
+// });
