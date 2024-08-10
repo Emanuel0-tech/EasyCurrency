@@ -48,3 +48,20 @@ let convertCurrency = () => {
 
 const convertButton = document.getElementById("convert-button");
 convertButton.addEventListener("click", convertCurrency);
+
+
+if (localStorage.getItem(`token`) == null){
+    alert(`Vc precisa estar locado para acessar essa página`)
+    window.location.href = `Emanuel0-tech/EasyCurrency/easyCurrencyLogin.html`;
+
+}
+
+
+
+let btnSair = document.querySelector(`.btn-sair`);
+
+btnSair.addEventListener(`click`, ()=>{
+    localStorage.removeItem(`token`);
+    window.location.href = `Emanuel0-tech/EasyCurrency/easyCurrencyLogin.html`;
+
+})
